@@ -8,7 +8,7 @@
     <script type="text/javascript">
       var maleNames = ["Kwasi","Kwadwo","Kwabena","Kwaku","Yaw","Kofi","Kwame"];
       var femaleNames = ["Akosua","Adwoa","Abenaa","Akua","Yaa","Afua","Ama"];
-      var actDay;
+        
 
       function getAkanName(){
         //declare variables
@@ -17,6 +17,8 @@
         var year = document.getElementById('year');
         var cc = parseInt((year.charAt(0)+year.charAt(1)));
         var yy = parseInt((year.charAt(2)+year.charAt(3)));
+        var rd1 = document.getElementById('radio1');
+        var rd2 = document.getElementById('radio2');
         //if statements to ensure user inputs correct data
         if(day > 31 | day < 1){
           alert("The data you have entered is not valid");
@@ -27,28 +29,8 @@
 
         //calculation to get day of week
         var dayOfWeek = parseInt(( ( (cc/4) -2*cc-1) + ((5*yy/4) ) + ((26*(month+1)/10)) + day ) % 7);
+        //0 = Friday, 1 = Saturday, 2 = Sunday, 3 = Monday, 4 = Tuesday, 5 = Wednesday, 6 = Thursday
 
-        if(dayOfWeek == 0){
-          actDay = "Friday";
-        }
-        if(dayOfWeek == 1){
-          actDay = "Saturday";
-        }
-        if(dayOfWeek == 2){
-          actDay = "Sunday";
-        }
-        if(dayOfWeek == 3){
-          actDay = "Monday";
-        }
-        if(dayOfWeek == 4){
-          actDay = "Tuesday";
-        }
-        if(dayOfWeek == 5){
-          actDay = "Wednesday";
-        }
-        if(dayOfWeek == 6){
-          actDay = "Thursday";
-        }
       }
     </script>
   </head>

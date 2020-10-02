@@ -8,6 +8,7 @@
     <script type="text/javascript">
       var maleNames = ["Kwasi","Kwadwo","Kwabena","Kwaku","Yaw","Kofi","Kwame"];
       var femaleNames = ["Akosua","Adwoa","Abenaa","Akua","Yaa","Afua","Ama"];
+      var actDay;
 
       function getAkanName(){
         //declare variables
@@ -24,7 +25,9 @@
           alert("The data you have entered is not valid");
         }
 
-        var dayOfWeek =
+        //calculation to get day of week
+        var dayOfWeek = parseInt(( ( (cc/4) -2*cc-1) + ((5*yy/4) ) + ((26*(month+1)/10)) + day ) % 7);
+        
       }
     </script>
   </head>

@@ -7,7 +7,21 @@
     <title>Akan name generator</title>
     <script type="text/javascript">
       var maleNames = ["Kwasi","Kwadwo","Kwabena","Kwaku","Yaw","Kofi","Kwame"];
-      var femaleNames = ["Akosua","Adwoa","Abenaa","Akua","Yaa","Afua","Ama"]
+      var femaleNames = ["Akosua","Adwoa","Abenaa","Akua","Yaa","Afua","Ama"];
+
+      function getAkanName(){
+        var dayOfWeek;
+        var day = document.getElementById('day');
+        var month = document.getElementById('month');
+        var year = document.getElementById('year');
+
+        if(day > 31 | day < 1){
+          alert("The data you have entered is not valid");
+        }
+        if (month > 12 | month < 1) {
+          alert("The data you have entered is not valid");
+        }
+      }
     </script>
   </head>
   <body>
@@ -20,9 +34,9 @@
         <p id="userInput">Birthday:</p>
         <form method="get">
           <label>Day:</label>
-          <input type="text" id="day">
+          <input type="number" id="day">
           <label>Month:</label>
-          <input type="text" id="month" placeholder="e.g October">
+          <input type="number" id="month" placeholder="e.g 10 for October">
           <label>Year:</label>
           <input type="number" id="year" placeholder="e.g 1999">
         </form>

@@ -10,3 +10,8 @@ h1{
   font-family: sans-serif;
   font-size: 25px;
 }
+
+#userInput{
+  font-weight: bold;
+  font-size: 25px;
+}

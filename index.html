@@ -6,12 +6,11 @@
     <link rel="stylesheet" href="css/styles.css">
     <title>Akan name generator</title>
     <script type="text/javascript">
-      var maleNames = ["Kwasi","Kwadwo","Kwabena","Kwaku","Yaw","Kofi","Kwame"];
-      var femaleNames = ["Akosua","Adwoa","Abenaa","Akua","Yaa","Afua","Ama"];
-        
 
       function getAkanName(){
         //declare variables
+        var maleNames = ["Kwasi","Kwadwo","Kwabena","Kwaku","Yaw","Kofi","Kwame"];
+        var femaleNames = ["Akosua","Adwoa","Abenaa","Akua","Yaa","Afua","Ama"];
         var day = document.getElementById('day');
         var month = document.getElementById('month');
         var year = document.getElementById('year');
@@ -19,6 +18,7 @@
         var yy = parseInt((year.charAt(2)+year.charAt(3)));
         var rd1 = document.getElementById('radio1');
         var rd2 = document.getElementById('radio2');
+        var akanName;
         //if statements to ensure user inputs correct data
         if(day > 31 | day < 1){
           alert("The data you have entered is not valid");
@@ -30,6 +30,30 @@
         //calculation to get day of week
         var dayOfWeek = parseInt(( ( (cc/4) -2*cc-1) + ((5*yy/4) ) + ((26*(month+1)/10)) + day ) % 7);
         //0 = Friday, 1 = Saturday, 2 = Sunday, 3 = Monday, 4 = Tuesday, 5 = Wednesday, 6 = Thursday
+
+        //if statements to determine the akan names
+        //male names
+        if(rd1.checked==true && dayOfWeek == 0){
+          akanName = maleNames[5];
+        }
+        if(rd1.checked==true && dayOfWeek == 1){
+          akanName = maleNames[6];
+        }
+        if(rd1.checked==true && dayOfWeek == 2){
+          akanName = maleNames[0];
+        }
+        if(rd1.checked==true && dayOfWeek == 3){
+          akanName = maleNames[1];
+        }
+        if(rd1.checked==true && dayOfWeek == 4){
+          akanName = maleNames[2];
+        }
+        if(rd1.checked==true && dayOfWeek == 5){
+          akanName = maleNames[3];
+        }
+        if(rd1.checked==true && dayOfWeek == 6){
+          akanName = maleNames[4];
+        }
 
       }
     </script>

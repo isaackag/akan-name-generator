@@ -27,7 +27,28 @@
 
         //calculation to get day of week
         var dayOfWeek = parseInt(( ( (cc/4) -2*cc-1) + ((5*yy/4) ) + ((26*(month+1)/10)) + day ) % 7);
-        
+
+        if(dayOfWeek == 0){
+          actDay = "Friday";
+        }
+        if(dayOfWeek == 1){
+          actDay = "Saturday";
+        }
+        if(dayOfWeek == 2){
+          actDay = "Sunday";
+        }
+        if(dayOfWeek == 3){
+          actDay = "Monday";
+        }
+        if(dayOfWeek == 4){
+          actDay = "Tuesday";
+        }
+        if(dayOfWeek == 5){
+          actDay = "Wednesday";
+        }
+        if(dayOfWeek == 6){
+          actDay = "Thursday";
+        }
       }
     </script>
   </head>
